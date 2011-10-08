@@ -1,0 +1,17 @@
+<project name="Build-For-Test" default="main" basedir=".">
+
+	<target name="main" depends="compileCSS">
+	
+		<echo>Built For Test!</echo>
+	
+	</target>
+
+	<target name="compileCSS">
+		<property name="asualJar" value="lesscss-engine-1.1.4-jar-with-dependencies.jar" />
+		<java jar="${asualJar}" fork="true" dir="${basedir}">
+			<arg value="../../demo.less" />
+			<arg value="output.css" />
+		</java>
+	</target>
+
+</project>

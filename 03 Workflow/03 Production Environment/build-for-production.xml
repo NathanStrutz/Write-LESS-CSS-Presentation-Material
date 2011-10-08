@@ -1,0 +1,30 @@
+<project name="Build-For-Production" default="main" basedir=".">
+
+	<target name="main" depends="compileCSS,compressCSS">
+	
+		<echo>Built For Production!</echo>
+	
+	</target>
+
+	<target name="compileCSS">
+		<property name="asualJar" value="lesscss-engine-1.1.4-jar-with-dependencies.jar" />
+		<java jar="${asualJar}" fork="true" dir="${basedir}">
+			<arg value="../../demo.less" />
+			<arg value="output.css" />
+		</java>
+	</target>
+	
+	<target name="compressCSS">
+		<java jar="yuicompressor-2.4.6.jar" fork="true">
+			<arg line="--type css -o ./output-min.css ./output.css"/>
+		</java>
+		<echo message="Compressed CSS File(s)" />
+	</target>
+	
+	<target name="compressJS">
+		<java jar="yuicompressor-2.4.6.jar" fork="true">
+			<arg line="--type js -o ./myjs.min.js ./myjs.js"/>
+		</java>
+	</target>
+
+</project>

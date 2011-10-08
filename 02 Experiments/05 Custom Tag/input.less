@@ -1,0 +1,21 @@
+@bg: lighten(#2D3032, 8%);
+@text: #F7F7F7;
+@highlight1: #DD5F18;
+@highlight2: #FBA922;
+@highlight3: #404333;
+@highlight4: spin(@highlight1, 180);
+
+body {
+	background:@bg;
+	color:@text;
+	h2 {
+		color:@highlight1;
+	}
+}
+
+.fancyShapeLeft {
+	.triangle-topleft(16px, @highlight4);
+}
+.fancyShapeRight {
+	.triangle-bottomright(16px, @highlight4);
+}

@@ -1,0 +1,55 @@
+@c1: #F7F7F7; // cream
+@c2: #2D3032; // very dark gray
+@c3: #DD5F18; // orange
+@c4: #FBA922; // yellow-orange
+@c5: #404333; // mustard dark gray
+
+body {
+	background: @c1;
+	color: @c2;
+	margin: 20px;
+	
+	font-family:Georgia, serif;
+	letter-spacing:.05em;
+	line-height:1.5em;
+	
+	nav {
+		margin:-20px -15px 20px;
+		a {
+			color:@c2;
+			text-decoration:none;
+			margin-right:1em;
+		}
+	}
+	
+	h1 {
+		margin: -20px -20px 20px -20px;
+		padding:1em 1.2em;
+		background: @c3;
+		color: @c5;
+	}
+	h2 {
+		margin: -20px -20px 20px -20px;
+		padding:1em 1.7em;
+		background: @c5;
+		color: @c3;
+	}
+	p, pre {
+		margin:20px;
+	}
+	pre.prettyprint {
+		font-family:Consolas,monospace;
+		letter-spacing:-0.2pt;
+		border:0;
+		font-size:1.2em;
+		line-height:1.2em;
+		font-weight:bold;
+	}
+	
+	a {
+		color: @c3;
+		&:hover {
+			color:@c4;
+		}
+	}
+}
