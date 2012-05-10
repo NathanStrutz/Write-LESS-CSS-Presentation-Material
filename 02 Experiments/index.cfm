@@ -10,7 +10,7 @@
 <cfcontent reset="true"><!doctype html>
 <html lang="en">
 <head>
-	<title>Write LESS CSS Demos</title>
+	<title>LESS CSS, Meet ColdFusion Demos</title>
 	<link rel="stylesheet/less" type="text/css" href="../demo.less" />
 	<script src="../less-1.3.0.min.js"></script>
 </head>

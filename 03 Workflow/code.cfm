@@ -22,7 +22,7 @@
 		<a href="./">&laquo; workflows</a>
 		<a href="browse.cfm?demo=#demoPath#">&##x25b2; directory</a>
 	</nav>
-	<h1>Write LESS CSS: Code: #sourcefile#</h1>
+	<h1>LESS CSS, Meet ColdFusion: Code: #sourcefile#</h1>
 	#codeToShow#
 </cfoutput>
 <script>
