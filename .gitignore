@@ -1,4 +1,4 @@
 .project
 .settings
 settings.xml
-*/.tmp*
+*.tmp_*

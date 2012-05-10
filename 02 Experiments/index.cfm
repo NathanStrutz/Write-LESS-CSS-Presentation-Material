@@ -12,7 +12,7 @@
 <head>
 	<title>Write LESS CSS Demos</title>
 	<link rel="stylesheet/less" type="text/css" href="../demo.less" />
-	<script src="../less-1.1.3.min.js"></script>
+	<script src="../less-1.3.0.min.js"></script>
 </head>
 <body>
 <nav>
