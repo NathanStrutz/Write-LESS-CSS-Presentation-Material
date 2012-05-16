@@ -4,6 +4,7 @@
 	fullPath = expandPath(demo);
 
 	if (structKeyExists(url,"deleteoutput")) {
+		try{fileDelete("#fullPath#input.css");} catch(any e) {}
 		try{fileDelete("#fullPath#output.css");} catch(any e) {}
 		try{fileDelete("#fullPath#output-min.css");} catch(any e) {}
 	}
@@ -34,7 +35,7 @@
 	<cfif len(readme)><p>#readme#</p></cfif>
 </cfoutput>
 	<pre><cfoutput query="dir">#chr(13)#
-<cfif type EQ "file">#rJustify(dateFormat(dir.DateLastModified, "short"), 12)# #rJustify(timeFormat(dir.DateLastModified, "short"), 9)#   #rJustify(dir.Size, 10)#  <a href="#demo##dir.name#">#dir.Name#</a> (<a href="code.cfm?sourcefile=#demo##dir.name#">code</a>) <cfif reFindNoCase("^build.*\.xml$", dir.name)>(<a href="Ant.cfm?sourcefile=#demo##dir.name#">Ant</a>)</cfif> <cfif dir.name EQ "output.css">(<a href="#cgi.script_name#?#cgi.query_string#<cfif cgi.query_string does not contain 'deleteoutput'>&deleteoutput=true</cfif>">delete</a>)</cfif></cfif>
+<cfif type EQ "file">#rJustify(dateFormat(dir.DateLastModified, "short"), 12)# #rJustify(timeFormat(dir.DateLastModified, "short"), 9)#   #rJustify(dir.Size, 10)#  <a href="#demo##dir.name#">#dir.Name#</a> (<a href="code.cfm?sourcefile=#demo##dir.name#">code</a>) <cfif reFindNoCase("^build.*\.xml$", dir.name)>(<a href="Ant.cfm?sourcefile=#demo##dir.name#">Ant</a>)</cfif> <cfif listFindNoCase("input.css,output.css,output-min.css", dir.name)>(<a href="#cgi.script_name#?#cgi.query_string#<cfif cgi.query_string does not contain 'deleteoutput'>&deleteoutput=true</cfif>">delete</a>)</cfif></cfif>
 
 </cfoutput></pre>
 
