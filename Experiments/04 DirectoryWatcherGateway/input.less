@@ -1,0 +1,15 @@
+@bg: lighten(#2D3032, 8%);
+@text: #F7F7F7;
+@highlight1: #DD5F18;
+@highlight2: spin(@highlight1, 180);
+
+body {
+	background:@bg;
+	color:@text;
+	h1 {
+		color:@highlight1;
+	}
+	strong {
+		color:@highlight2;
+	}
+}
