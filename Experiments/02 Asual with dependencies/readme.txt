@@ -1,1 +1,0 @@
-My second ColdFusion + LESS experiment. It uses the Asual LESS Engine project jar with dependencies, which includes Mozilla Rhino and Apache Commons Logging.

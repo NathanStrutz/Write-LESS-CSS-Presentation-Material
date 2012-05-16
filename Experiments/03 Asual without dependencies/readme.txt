@@ -1,1 +1,0 @@
-My third ColdFusion + LESS experiment. It uses the Asual LESS Engine jar without dependencies, but instead of using a Mozilla Rhino jar, it uses the one that ships with ColdFusion.

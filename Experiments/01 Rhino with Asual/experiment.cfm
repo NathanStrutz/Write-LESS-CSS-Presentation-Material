@@ -1,8 +1,7 @@
 ﻿<cfscript>
 	thisPath = getDirectoryFromPath(getCurrentTemplatePath());
-	loadPaths = ArrayNew(1);
-	arrayAppend(loadPaths, thisPath & "js.jar");
-	arrayAppend(loadPaths, thisPath & "lesscss-engine-1.1.4.jar");
+    loadPaths = ArrayNew(1);
+    arrayAppend(loadPaths, thisPath & "lesscss-engine-1.1.4.jar");
 </cfscript>
 
 <cfset loader = createObject("component", "javaloader.JavaLoader").init(loadPaths, 'true') />

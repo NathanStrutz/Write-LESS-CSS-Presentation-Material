@@ -1,1 +1,1 @@
-My first ColdFusion + LESS experiment. It uses the Asual LESS Engine project jar and the Rhino js.jar for the javascript engine.
+My first ColdFusion + LESS experiment. It uses the Asual LESS Engine project jar and ColdFusion's built-in Rhino jar for the javascript engine.
