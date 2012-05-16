@@ -2,7 +2,6 @@
 
 	dir = directoryList(expandPath("./"), false, "query");
 	dirName = listLast(expandPath("./"), "\");
-	demoNumber = numberFormat(listFirst(dirName, " "));
 	demoName = listLast(dirName, " ");
 
 </cfscript>
@@ -18,7 +17,7 @@
 <nav>
 	<a href="../">&laquo; demos</a>
 </nav>
-<h1><cfoutput>Demo #demoNumber#: LESS ColdFusion #demoName#</cfoutput></h1>
+<h1><cfoutput>Demo: LESS ColdFusion #demoName#</cfoutput></h1>
 <ol>
 	<cfoutput query="dir">
 		<cfif type EQ "dir">
